@@ -14,7 +14,13 @@ class SignupLayout extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            const Text("Sign up"),
+            Padding(
+              padding: const EdgeInsets.only(bottom: 24),
+              child: Text(
+                "Sign up",
+                style: Theme.of(context).textTheme.headline6,
+              ),
+            ),
             Form(
               key: _formKey,
               child: Column(
@@ -24,32 +30,40 @@ class SignupLayout extends StatelessWidget {
                     decoration: const InputDecoration(
                       hintText: "Email",
                       prefixIcon: Icon(Icons.person),
-                      border: OutlineInputBorder(),
                     ),
                     validator: (value) => Validator.email(value),
                   ),
+                  const SizedBox(height: 8),
                   TextFormField(
                     decoration: const InputDecoration(
                       hintText: "Password",
                       prefixIcon: Icon(Icons.lock),
-                      border: OutlineInputBorder(),
                     ),
                     obscureText: true,
                     validator: (value) => Validator.password(value),
                   ),
-                  ElevatedButton(
-                    onPressed: () {
-                      if (_formKey.currentState!.validate()) {
-                        print("correct");
-                      }
-                      print("incorrect");
-                    },
-                    child: const Text("Login"),
+                  SizedBox(
+                    width: double.infinity,
+                    child: ElevatedButton(
+                      onPressed: () {
+                        if (_formKey.currentState!.validate()) {
+                          print("correct");
+                        }
+                        print("incorrect");
+                      },
+                      child: const Text("Login"),
+                    ),
                   ),
-                  const Text("Already have an account?"),
-                  TextButton(onPressed: () => Navigator.pushNamed(context, "/login"), child: const Text("Log in"))
                 ],
               ),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Text("Already have an account?"),
+                const SizedBox(width: 4),
+                TextButton(onPressed: () => Navigator.pushNamed(context, "/login"), child: const Text("Log in"))
+              ],
             ),
           ],
         ),

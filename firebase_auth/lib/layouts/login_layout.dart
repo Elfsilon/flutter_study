@@ -14,7 +14,10 @@ final _formKey = GlobalKey<FormState>();
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            const Text("Log in"),
+            Text(
+              "Log in",
+              style: Theme.of(context).textTheme.headline6,
+            ),
             Form(
               key: _formKey,
               child: Column(
@@ -24,7 +27,6 @@ final _formKey = GlobalKey<FormState>();
                     decoration: const InputDecoration(
                       hintText: "Email",
                       prefixIcon: Icon(Icons.person),
-                      border: OutlineInputBorder(),
                     ),
                     validator: (value) => Validator.email(value),
                   ),
@@ -32,7 +34,6 @@ final _formKey = GlobalKey<FormState>();
                     decoration: const InputDecoration(
                       hintText: "Password",
                       prefixIcon: Icon(Icons.lock),
-                      border: OutlineInputBorder(),
                     ),
                     obscureText: true,
                   ),
@@ -45,8 +46,13 @@ final _formKey = GlobalKey<FormState>();
                     },
                     child: const Text("Login"),
                   ),
-                  const Text("Don't have an account?"),
-                  TextButton(onPressed: () => Navigator.pushNamed(context, "/signup"), child: const Text("Sign up")),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      const Text("Don't have an account?"),
+                      TextButton(onPressed: () => Navigator.pushNamed(context, "/signup"), child: const Text("Sign up")),
+                    ],
+                  ),
                 ],
               ),
             ),
