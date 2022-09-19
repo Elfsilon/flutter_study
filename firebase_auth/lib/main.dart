@@ -47,6 +47,7 @@ class MyApp extends StatelessWidget {
           style: ButtonStyle(
             minimumSize: MaterialStateProperty.all(Size.zero),
             padding: MaterialStateProperty.all(EdgeInsets.zero),
+            // tapTargetSize: MaterialTapTargetSize.shrinkWrap,
           ),
         ),
         inputDecorationTheme: const InputDecorationTheme(
