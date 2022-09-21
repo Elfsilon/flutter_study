@@ -1,16 +1,17 @@
 # studyapp1_firebase
 
-A new Flutter project.
+Flutter study project #1.
 
-## Getting Started
+## Learned
 
-This project is a starting point for a Flutter application.
+- How to create layouts and styling custom widgets
+- How to build app theme
+- How to work with forms
+- How to connect and work with firebase
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## What to improve
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Add routing with protected routes insted of conditional rendering
+- Learn and apply architectural machanisms such as BLoC to control buisness logic
+- Use libs for working with forms such as form_builder
