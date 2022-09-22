@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:studyapp2_architectures/inherited_widget_way/inherited_widget_home.dart';
+import 'package:studyapp2_architectures/inherited_widget_way/inherited_way.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,12 +12,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Flutter architects',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.lightGreen,
+        primarySwatch: Colors.blue,
       ),
-      home: const InheritedWidgetHome(),
+      home: const InheritedWay(),
     );
   }
 }
